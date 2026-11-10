@@ -1,67 +1,34 @@
 # Engineering Handbook · 工程知识库
 
-使用 [VitePress](https://vitepress.dev/) 构建的中文团队工程知识库，面向新人入门、AI 编程、研发规范和团队知识分享。
+基于 [VitePress](https://vitepress.dev/) 的中文团队工程知识库。
 
-文档网站：https://sivan757.github.io/engineering-handbook/
+**在线文档：** https://sivan757.github.io/engineering-handbook/
 
-> **公开内容规则：** 不要提交密钥、账号、真实客户数据、公司未公开的项目资料或内部访问地址。公司专用的架构图、流程和运维手册应放在有访问控制的内部知识库。
+## 内容导航
 
-## 内容
+- [新人入门](docs/start/index.md)：API、HTTP、开发工具和排错。
+- [AI 实践](docs/ai/index.md)：基础概念、提示词、AI 编程和安全。
+- [研发规范](docs/standards/index.md)：Git、API 设计、测试和发布。
+- [团队成长](docs/team/index.md)：培训计划、知识共享与共建。
+- [术语表](docs/reference/glossary.md)。
 
-| 领域 | 主要内容 |
-| --- | --- |
-| [新人入门](docs/start/index.md) | API、HTTP、开发工具、问题排查 |
-| [AI 实践](docs/ai/index.md) | AI 概念、提示词、AI 编程、信息安全 |
-| [研发规范](docs/standards/index.md) | Git、PR、API 设计、测试、发布 |
-| [团队成长](docs/team/index.md) | 四周训练计划、知识分享和文档共建 |
-| [术语表](docs/reference/glossary.md) | 高频词汇与简明解释 |
+## 本地开发
 
-## 本地运行
-
-使用 Node.js 20+：
+要求 Node.js 20+。
 
 ```bash
 npm install
 npm run docs:dev
-```
-
-构建和预览：
-
-```bash
 npm run docs:build
-npm run docs:preview
 ```
 
-## GitHub Pages
+## 发布
 
-首次发布时在仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。
+在 GitHub 仓库 Settings → Pages → Build and deployment 中选择 **GitHub Actions**。推送到 `main` 后由工作流自动构建和发布。
 
-`main` 分支上的推送会触发 `.github/workflows/deploy-pages.yml`，构建并发布文档。
+## 贡献
 
-公开站点路径为 `/engineering-handbook/`。如果仓库改名，需要更新部署工作流中的 `DOCS_BASE`。
+请参阅 [文档贡献指南](docs/team/contributing.md)。可以通过 Issue 提出知识点需求，通过 Pull Request 审核文章。
 
-## 贡献方式
+> **公开内容规则：** 不提交密钥、客户信息、内部地址、未公开代码和内部架构。公司内部运行手册应放在访问受控的独立知识库。
 
-1. 使用 [文档模板](docs/reference/templates.md) 编写 Markdown。
-2. 运行 `npm run docs:build`。
-3. 通过 Pull Request 审核内容。
-4. 合并后自动发布。
-
-详细规则见 [贡献指南](docs/team/contributing.md)。
-
-## 目录
-
-```text
-.github/
-  workflows/
-  ISSUE_TEMPLATE/
-docs/
-  .vitepress/
-  start/
-  ai/
-  standards/
-  team/
-  reference/
-```
-
-首版目标是围绕实际问题持续沉淀，而不是一次性写完所有知识。
