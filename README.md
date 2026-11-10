@@ -1,34 +1,39 @@
-# Engineering Handbook · 工程知识库
+# 产研知识库 · Product & Engineering Handbook
 
-基于 [VitePress](https://vitepress.dev/) 的中文团队工程知识库。
+面向产品、研发、测试及 AI 实践人员的开放中文知识库。
 
 **在线文档：** https://sivan757.github.io/engineering-handbook/
 
-## 内容导航
+## 主要入口
 
-- [新人入门](docs/start/index.md)：API、HTTP、开发工具和排错。
-- [AI 实践](docs/ai/index.md)：基础概念、提示词、AI 编程和安全。
-- [研发规范](docs/standards/index.md)：Git、API 设计、测试和发布。
-- [团队成长](docs/team/index.md)：培训计划、知识共享与共建。
-- [术语表](docs/reference/glossary.md)。
+- [按角色学习](docs/learning/index.md)：产品经理、研发、测试与 AI 实践。
+- [通识基础](docs/start/index.md)：API、HTTP、接口调试。
+- [AI 素养](docs/ai/index.md)：大语言模型、提示词、AI 编程。
+- [产品与体验](docs/product/index.md)：需求、原型与产品验证的建设计划。
+- [研发实践](docs/standards/index.md)：Git、API 设计、测试和发布。
+- [团队知识共建](docs/team/index.md)：写作规范、建设路线图和协作。
 
 ## 本地开发
 
-要求 Node.js 20+。
+需要 Node.js 20+。
 
-```bash
+~~~bash
 npm install
 npm run docs:dev
 npm run docs:build
-```
+~~~
 
-## 发布
+GitHub Pages 使用 `.github/workflows/deploy-pages.yml` 自动发布。仓库 Settings → Pages 中的 Source 选择 **GitHub Actions**。
 
-在 GitHub 仓库 Settings → Pages → Build and deployment 中选择 **GitHub Actions**。推送到 `main` 后由工作流自动构建和发布。
+## 贡献文档
 
-## 贡献
+- [写作规范](docs/team/writing-guide.md)
+- [内容建设路线图](docs/team/roadmap.md)
+- [文档模板](templates/)
+- [贡献指南](docs/team/contributing.md)
+- [Agent 写作与审查规则](AGENTS.md)
 
-请参阅 [文档贡献指南](docs/team/contributing.md)。可以通过 Issue 提出知识点需求，通过 Pull Request 审核文章。
+提交 PR 前执行构建，并在描述中记录真实验证结果。
 
-> **公开内容规则：** 不提交密钥、客户信息、内部地址、未公开代码和内部架构。公司内部运行手册应放在访问受控的独立知识库。
+> **公开内容边界：** 不提交密钥、生产地址、客户数据、未公开源码或公司内部架构。团队内部资料需要独立、受控的存储位置。
 
