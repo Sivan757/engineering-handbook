@@ -1,6 +1,6 @@
 ---
 title: AI 实践学习路径
-description: 产品与研发人员共用的 AI 使用与工程实践路径。
+description: 按产品、研发和测试角色选择学习顺序和验收练习。
 docType: tutorial
 level: L1
 status: published
@@ -8,22 +8,31 @@ status: published
 
 # AI 实践学习路径
 
-**目标：** 能清晰地分配 AI 任务、识别错误，并通过验证形成可靠成果。
+**共同目标：** 能使用 AI 完成明确任务，并区分模型回答、真实证据和已完成的操作。
 
-## 全员通识
+## 所有人先完成
 
-1. [AI 基础概念](/ai/)
-2. [提示词怎么写](/ai/prompt)
-3. [AI 安全与边界](/ai/security)
+1. [AI、机器学习与生成式 AI](/ai/what-is-ai)
+2. [大语言模型如何工作](/ai/llm)
+3. [Token 与上下文](/ai/tokens-context)
+4. [能力、幻觉与局限](/ai/limits)
+5. [提示词怎么写](/ai/prompt)
+6. [提示词改写练习](/ai/prompt-workshop)
 
-## 研发深化
+**验收：** 能解释 LLM 的局限，并针对真实工作问题写出明确的输入、输出和判断标准。
 
-1. [AI 编程工作流](/ai/coding)
-2. [测试与质量](/standards/testing)
-3. 后续专题：工具调用、MCP、Agent、Skills、评估和可观测性。
+## 按角色深化
 
-## 实战练习
+| 角色 | 推荐内容 | 目标 |
+| --- | --- | --- |
+| 产品与设计 | [结构化输出](/ai/structured-output) → [产品实践](/ai/product-practice) → [评估](/ai/evaluation) | 把需求与假设分开，并形成可验收草案 |
+| 开发 | [模型 API](/ai/model-api) → [工具调用](/ai/tool-calling) → [Agent](/ai/agent) → [MCP](/ai/mcp) → [Skills](/ai/skills) → [AI 编程](/ai/coding) | 解释系统数据流并安全完成代码任务 |
+| 测试 | [结构化输出](/ai/structured-output) → [评估](/ai/evaluation) → [安全](/ai/security) | 设计测试集、核对输出并报告风险 |
 
-将“帮我做一个任务管理功能”改写为包含目标、用户、边界、输入、输出及验收方式的任务说明。
+所有人都需要阅读 [AI 安全与边界](/ai/security)。
 
-**完成标准：** 能指出 AI 回答中的未经证实的假设，能描述下一步怎样验证输出。
+## 课程结束
+
+完成 [综合实践](/ai/capstone)。选择与你的岗位相符的任务，展示已验证证据和待确认事项。
+
+如果不知道从哪里开始，可直接阅读 [课程总览](/ai/)。

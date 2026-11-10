@@ -42,15 +42,50 @@ export default defineConfig({
           { text: '开发工具与排错', link: '/start/terminal' }
         ]
       }],
-      '/ai/': [{
-        text: 'AI 素养与实践',
-        items: [
-          { text: 'AI 基础概念', link: '/ai/' },
-          { text: '提示词怎么写', link: '/ai/prompt' },
-          { text: 'AI 编程工作流', link: '/ai/coding' },
-          { text: 'AI 安全与边界', link: '/ai/security' }
-        ]
-      }],
+      '/ai/': [
+        {
+          text: '课程总览',
+          items: [{ text: '学习目标与路线', link: '/ai/' }]
+        },
+        {
+          text: '第一阶段：建立认知',
+          items: [
+            { text: 'AI、机器学习与生成式 AI', link: '/ai/what-is-ai' },
+            { text: '大语言模型如何工作', link: '/ai/llm' },
+            { text: 'Token 与上下文窗口', link: '/ai/tokens-context' },
+            { text: '能力、幻觉与局限', link: '/ai/limits' }
+          ]
+        },
+        {
+          text: '第二阶段：会用 AI',
+          items: [
+            { text: '提示词怎么写', link: '/ai/prompt' },
+            { text: '提示词改写练习', link: '/ai/prompt-workshop' },
+            { text: '结构化输出与 JSON', link: '/ai/structured-output' }
+          ]
+        },
+        {
+          text: '第三阶段：理解 AI 系统',
+          items: [
+            { text: '模型 API 与应用架构', link: '/ai/model-api' },
+            { text: 'RAG：外部资料检索', link: '/ai/rag' },
+            { text: 'Tool Calling', link: '/ai/tool-calling' },
+            { text: 'Workflow 与 Agent', link: '/ai/agent' },
+            { text: 'MCP：工具连接协议', link: '/ai/mcp' },
+            { text: 'Skills：复用任务方法', link: '/ai/skills' }
+          ]
+        },
+        {
+          text: '第四阶段：可靠交付',
+          items: [
+            { text: '产品人员如何使用 AI', link: '/ai/product-practice' },
+            { text: 'AI 辅助编程工作流', link: '/ai/coding' },
+            { text: 'AI 输出如何评估', link: '/ai/evaluation' },
+            { text: 'AI 数据安全与边界', link: '/ai/security' },
+            { text: '综合实践与验收', link: '/ai/capstone' }
+          ]
+        }
+      ],
       '/product/': [{
         text: '产品与体验',
         items: [
@@ -102,4 +137,3 @@ export default defineConfig({
     }
   }
 })
-
